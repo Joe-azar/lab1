@@ -1,0 +1,24 @@
+/* read_unsigned.tig */
+let
+  function read_unsigned() : int =
+    let
+      var str : string := "";
+      var c : string := getchar()
+    in
+      while c <> "\n" do
+        str := str + c;
+        c := getchar()
+      done;
+      
+      if str = "" then
+        -1
+      else
+        ord(str)
+    end
+in
+  var a : int := read_unsigned()
+in
+  print_int(a*2);
+  print("\n")
+end
+
